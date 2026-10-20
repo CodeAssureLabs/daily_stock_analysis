@@ -88,7 +88,7 @@ def normalize_stock_code(stock_code: str) -> str:
     This function is applied at the DataProviderManager layer so that
     all individual fetchers receive a clean 6-digit code (for A-shares/ETFs).
     """
-    code = stock_code.strip()
+    code = stock_code.strip().replace(" ", "")
     upper = code.upper()
 
     # Normalize HK prefix to a canonical 5-digit form (e.g. hk1810 -> HK01810)
