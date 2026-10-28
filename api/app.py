@@ -246,7 +246,7 @@ def create_app(static_dir: Optional[Path] = None) -> FastAPI:
     
     # 允许所有来源（开发/演示用）
     allow_all_origins = os.environ.get("CORS_ALLOW_ALL", "").lower() == "true"
-    allow_credentials = not allow_all_origins
+    allow_credentials = True
     if allow_all_origins:
         _warn_if_open_cors_without_auth()
         allowed_origins = ["*"]
