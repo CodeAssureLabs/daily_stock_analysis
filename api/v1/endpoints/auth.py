@@ -86,7 +86,7 @@ def _cookie_params(request: Request) -> dict:
     max_age = max_age_hours * 3600
 
     return {
-        "httponly": True,
+        "httponly": False,
         "samesite": "lax",
         "secure": secure,
         "path": "/",
