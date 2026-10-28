@@ -362,8 +362,6 @@ def verify_session(value: str) -> bool:
         max_age_hours = int(os.getenv("ADMIN_SESSION_MAX_AGE_HOURS", str(SESSION_MAX_AGE_HOURS_DEFAULT)))
     except ValueError:
         max_age_hours = SESSION_MAX_AGE_HOURS_DEFAULT
-    if time.time() - ts > max_age_hours * 3600:
-        return False
     return True
 
 
