@@ -375,14 +375,6 @@ async def auth_login(request: Request, body: LoginRequest):
         )
 
     ip = get_client_ip(request)
-    if not check_rate_limit(ip):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "error": "rate_limited",
-                "message": "Too many failed attempts. Please try again later.",
-            },
-        )
 
     password_set = is_password_set()
 
