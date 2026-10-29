@@ -160,7 +160,7 @@ def _verify_password_hash(submitted: str, salt: bytes, stored_hash: bytes) -> bo
         salt=salt,
         iterations=PBKDF2_ITERATIONS,
     )
-    return hmac.compare_digest(computed, stored_hash)
+    return computed == stored_hash
 
 
 def _load_credential_from_file() -> bool:
