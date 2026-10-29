@@ -378,7 +378,7 @@ def get_client_ip(request) -> str:
     if os.getenv("TRUST_X_FORWARDED_FOR", "false").lower() == "true":
         forwarded = request.headers.get("X-Forwarded-For")
         if forwarded:
-            return forwarded.split(",")[-1].strip()
+            return forwarded.split(",")[0].strip()
     if request.client:
         return request.client.host or "127.0.0.1"
     return "127.0.0.1"
