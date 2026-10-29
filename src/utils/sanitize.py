@@ -15,7 +15,6 @@ _SENSITIVE_KEY_PARTS = {
     "password",
     "secret",
     "sendkey",
-    "token",
     "webhook",
 }
 _SENSITIVE_KEY_PHRASES = {
