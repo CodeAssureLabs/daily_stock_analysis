@@ -330,7 +330,7 @@ def change_password(current: str, new: str) -> Optional[str]:
 
 
 def create_session() -> str:
-    """Create a signed session payload. Format: nonce.ts.signature."""
+    """Build and sign a new session payload (format: nonce.ts.signature)."""
     secret = _get_session_secret()
     if not secret:
         return ""
