@@ -86,7 +86,7 @@ beforeEach(() => {
     saved: 1,
     completed: 1,
     insufficient: 0,
-    errors: 0,
+    failed: 0,
   });
 });
 

@@ -24,7 +24,7 @@ class BacktestRunResponse(BaseModel):
     saved: int = Field(..., description="写入回测结果数")
     completed: int = Field(..., description="完成回测数")
     insufficient: int = Field(..., description="数据不足数")
-    errors: int = Field(..., description="错误数")
+    failed: int = Field(..., description="错误数")
 
 
 class BacktestResultItem(BaseModel):

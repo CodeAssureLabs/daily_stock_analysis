@@ -22,7 +22,7 @@ export interface BacktestRunResponse {
   saved: number;
   completed: number;
   insufficient: number;
-  errors: number;
+  failed: number;
 }
 
 // ============ Result Item ============
