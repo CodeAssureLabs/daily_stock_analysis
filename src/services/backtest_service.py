@@ -212,7 +212,7 @@ class BacktestService:
             "processed": processed,
             "saved": saved,
             "completed": completed,
-            "insufficient": insufficient,
+            "insufficient_data": insufficient,
             "errors": errors,
         }
 
