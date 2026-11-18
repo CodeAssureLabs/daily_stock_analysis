@@ -213,7 +213,7 @@ class BacktestService:
             "saved": saved,
             "completed": completed,
             "insufficient": insufficient,
-            "errors": errors,
+            "failed": errors,
         }
 
     def get_recent_evaluations(

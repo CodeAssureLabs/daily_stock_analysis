@@ -695,7 +695,7 @@ def run_full_analysis(
                 )
                 logger.info(
                     f"自动回测完成: processed={stats.get('processed')} saved={stats.get('saved')} "
-                    f"completed={stats.get('completed')} insufficient={stats.get('insufficient')} errors={stats.get('errors')}"
+                    f"completed={stats.get('completed')} insufficient={stats.get('insufficient')} failed={stats.get('failed')}"
                 )
         except Exception as e:
             logger.warning(f"自动回测失败（已忽略）: {e}")
@@ -936,7 +936,7 @@ def main() -> int:
             )
             logger.info(
                 f"回测完成: processed={stats.get('processed')} saved={stats.get('saved')} "
-                f"completed={stats.get('completed')} insufficient={stats.get('insufficient')} errors={stats.get('errors')}"
+                f"completed={stats.get('completed')} insufficient={stats.get('insufficient')} failed={stats.get('failed')}"
             )
             return 0
 

@@ -211,8 +211,8 @@ const RunSummary: React.FC<{ data: BacktestRunResponse; language: UiLanguage }> 
     <span className="label">{text.saved} <span className="value primary">{data.saved}</span></span>
     <span className="label">{text.completed} <span className="value success">{data.completed}</span></span>
     <span className="label">{text.insufficient} <span className="value warning">{data.insufficient}</span></span>
-    {data.errors > 0 && (
-      <span className="label">{text.errors} <span className="value danger">{data.errors}</span></span>
+    {data.failed > 0 && (
+      <span className="label">{text.errors} <span className="value danger">{data.failed}</span></span>
     )}
   </div>
   );
